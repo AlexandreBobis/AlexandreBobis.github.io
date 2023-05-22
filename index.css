@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* BACKGROUND */
+
+.glowing {
+    position: relative;
+    min-width: 700px;
+    height: 550px;
+    margin: -150px;
+    transform-origin: right;
+    animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+    transform-origin: left;
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.glowing span {
+    position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
+
+.glowing span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+    background: rgba(134,255,0,1);
+    box-shadow: 0 0 20px rgba(134,255,0,1),
+    0 0 40px rgba(134,255,0,1),
+    0 0 60px rgba(134,255,0,1),
+    0 0 80px rgba(134,255,0,1),
+    0 0 0 8px rgba(134,255,0,.1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+    background: rgba(255,214,0,1);
+    box-shadow: 0 0 20px rgba(255,214,0,1),
+    0 0 40px rgba(255,214,0,1),
+    0 0 60px rgba(255,214,0,1),
+    0 0 80px rgba(255,214,0,1),
+    0 0 0 8px rgba(255,214,0,.1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+    background: rgba(0,226,255,1);
+    box-shadow: 0 0 20px rgba(0,226,255,1),
+    0 0 40px rgba(0,226,255,1),
+    0 0 60px rgba(0,226,255,1),
+    0 0 80px rgba(0,226,255,1),
+    0 0 0 8px rgba(0,226,255,.1);
+}
+
+.glowing span:nth-child(3n + 1) {
+    animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+    animation: animate 8s alternate infinite; 
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* NAVBAR */
+
+.primary-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+.container {
+    max-width: 120rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.navbar {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    transition: height 0.25s;
+}
+
+.logo {
+    transition: color .25s;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #c9c9c9;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #eaeaea;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin-left: 5rem;
+    margin-right: auto;
+}
+
+.nav-link {
+    transition: color .25s;
+    text-decoration: none;
+    color: #c9c9c9;
+}
+
+.nav-link:hover {
+    color: #eaeaea;
+}
+
+.button {
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    transition: background-color 0.25s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #d3d3d3;
+}
+
+header.active {
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+
+header.active .navbar {
+    height: 6rem;
+}
+
+header.active .logo, header.active .nav-link {
+    color: #313131;
+}
+
+header.active .nav-link:hover {
+    color: #808080;
+}
+
+header.active .button {
+    background-color: #313131;
+    color: #fff;
+}
+
+header.active .button:hover {
+    background-color: #151515;
+}
