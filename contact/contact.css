@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+html {
+    background-color: rgb(1, 1, 51);
+}
+
+.linkedin-card {
+    display: flex;
+    background-color: rgb(61, 61, 138);
+    padding: 10px;
+    border-radius: 55px;
+    width: 350px;
+    flex-direction: row;
+}
+
+.linkedin-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 40%;
+    margin-right: 20px;
+}
+
+.linkedin-text {
+    font-family: 'Inter', sans-serif;
+    margin-top: 15px;
+}
+
+.linkedin-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.linkedin-location {
+    font-size: 15px;
+    color: white;
+    margin-bottom: 10px;
+}
