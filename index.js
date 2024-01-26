@@ -55,34 +55,6 @@ const beginBtn = document.getElementById('begin').addEventListener('click', () =
     setTimeout(() => {
         container.style.display = "none";
     }, 250000);
-
-    // setTimeout(() => {
-    //     nav.animate([
-    //         { opacity: 0 },
-    //         { display: 'block'},
-    //         { opacity: 1 }
-    //     ], {
-    //         duration: 2000,
-    //         iterations: 1,
-    //         easing: 'ease-in'
-    //     });
-    // }, 1000);
-
-    // setTimeout(() => {
-    //     nav.style.display = 'block';
-    // }, 3000);
-    
-    // setTimeout(() => {
-    //     container.animate([
-    //         { opacity: 0 },
-    //         { display: 'block'},
-    //         { opacity: 1 }
-    //     ], {
-    //         duration: 5000,
-    //         // iterations: 1,
-    //         easing: 'ease-in-out'
-    //     });
-    // }, 1000);
     
     htmlElement.animate([
         { overflow: 'hidden' },
