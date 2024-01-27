@@ -18,18 +18,18 @@ const beginBtn = document.getElementById('begin').addEventListener('click', () =
         easing: 'ease-in'
     });
 
-    skipDiv.animate([
-        { opacity: 0 },
-        { display: 'block' },
-        { opacity: 1 }
-    ], {
-        duration: 3000,
-        easing: 'ease-in'
-    });
+    // skipDiv.animate([
+    //     { opacity: 0 },
+    //     { display: 'block' },
+    //     { opacity: 1 }
+    // ], {
+    //     duration: 3000,
+    //     easing: 'ease-in'
+    // });
 
     setTimeout(() => {
         beginDiv.style.display = 'none';
-        skipDiv.style.display = 'block';
+        // skipDiv.style.display = 'block';
     }, 1000);
 
 
