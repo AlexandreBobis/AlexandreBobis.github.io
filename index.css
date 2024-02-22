@@ -31,7 +31,7 @@ body {
 
 /* Set the animation, color, size and hide the text */
 .intro {
-    margin-top: 350px;
+    margin-top: 18%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@ body {
 
 /* Set the animation & hide the logo */
 .logo {
-    margin-top: 280px;
+    margin-top: 10%;
     font-size: 280%;  
     font-family: 'Jedi-font';
     display: flex;
@@ -254,6 +254,29 @@ a {
 }
 
 /*! MAIN PAGE */
+
+.contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#contact {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: 'Jedi-font';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-star-wars);
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+#contact:hover {
+    background: rgb(255, 245, 108);
+    cursor: pointer;
+}
 
 .begin {
     margin-top: 14%;
@@ -496,4 +519,51 @@ section.top .socials > a {
 .top a {
     text-decoration: none;
     color: #a0a8bd;
+}
+
+@media screen and (max-width: 1048px) {
+    #begin {
+        font-size: 200%;
+    }
+    .intro {
+        font-size: 250%;
+    }
+    .logo {
+        margin-top: 20%;
+        font-size: 200%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .begin {
+        margin-top: 35%;
+    }
+    #begin {
+        font-size: 200%;
+    }
+    .intro {
+        margin-top: 45%;
+        font-size: 250%;
+    }
+    .logo {
+        margin-top: 50%;
+        font-size: 120%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .begin {
+        margin-top: 70%;
+    }
+    #begin {
+        font-size: 150%;
+    }
+    .intro {
+        margin-top: 80%;
+        font-size: 200%;
+    }
+    .logo {
+        margin-top: 80%;
+        font-size: 70%;
+    }
 }

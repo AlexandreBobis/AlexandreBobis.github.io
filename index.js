@@ -9,6 +9,10 @@ let beginDiv = document.querySelector('.begin'),
     content = document.querySelector('#content'),
     skipDiv = document.querySelector('.skip');
 
+// const contactBtn = document.getElementById('contact').addEventListener('click', () => {
+//     window.location.href = './contact/contact.html';
+// });
+
 const beginBtn = document.getElementById('begin').addEventListener('click', () => {
     beginDiv.animate([
         { opacity: 1 },
@@ -37,7 +41,7 @@ const beginBtn = document.getElementById('begin').addEventListener('click', () =
         intro.style.animation = 'intro 6s ease-in-out 1s';
         logo.style.animation = 'logo 9s ease-in-out 9s';
         content.style.animation = 'scroll 100s linear 18s'
-        container.style.animation = 'container 250s ease-in-out 80s';
+        container.style.animation = 'container 250s ease-in-out 75s';
     }, 1000);
 
     setTimeout(() => {
@@ -97,3 +101,4 @@ function getRandomPosition() {
     var randomY = Math.floor(Math.random()*y);
     return [randomX,randomY];
 }
+
