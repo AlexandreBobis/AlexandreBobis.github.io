@@ -10,9 +10,9 @@ function toggleMenu() {
     menuBtn.classList.toggle('active');
     sideMenu.classList.toggle('active');
 
-    if (sideMenu.style.width === '250px') {
-        sideMenu.style.width = '0';
+    if (sideMenu.style.right === '0px') {
+        sideMenu.style.right = '-250px';
     } else {
-        sideMenu.style.width = '250px';
+        sideMenu.style.right = '0px';
     }
 }
