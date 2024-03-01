@@ -2,6 +2,7 @@ html {
     /* background-image: url(/images/umbrella.png); */
     background-repeat: no-repeat;
     background-position-y: bottom;
+    overflow: hidden;
 }
 
 #main-container {
@@ -24,11 +25,12 @@ html {
 }
 
 #main-container ul li {
-    padding: 10px;
+    padding: 15px;
     font-size: 20px;
     font-family: 'Honk', sans-serif;
     display: block;
     transition: 0.3s;
+    text-align: center;
 }
 
 .logo {

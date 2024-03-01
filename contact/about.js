@@ -17,9 +17,8 @@ function toggleMenu() {
     }
 }
 
-let typed = new Typed('.auto-typing', {
-    strings: ["Alexandre BOBIS", "Web Developer", "Video Games Player", "World Adventurer"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
+window.addEventListener('scroll', function() {
+    let offset = window.scrollY;
+    let parallax = document.querySelector('.parallax');
+    parallax.style.backgroundPositionY = offset * 0.6 + 'px'; // Ajustez le coefficient selon vos préférences
 });

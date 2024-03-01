@@ -1,0 +1,328 @@
+:root {
+    --first: #132A13;
+    --second: #31572C;
+    --third: #4F772D;
+    --fourth: #90A955;
+    --fifth: #ECF39E;
+    --background-color: #16252C;
+}
+
+html {
+    /* background-color: var(--fifth); */
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.parallax {
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow-x: hidden;
+}
+
+header {
+    display: block;
+    width: 100vw;
+    height: 14vh;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--first);
+}
+
+#profileImg {
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(/images/profile-picture.jpg);
+    background-size: cover;
+}
+
+header h1 {
+    text-align: center;
+    color: #fff;
+    animation: effect 5s infinite;
+}
+
+@keyframes effect {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: var(--fifth);
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+/*! HAMBURGER */
+
+.menu-btn {
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: var(--first);
+    border-radius: 0 0 0 5px;
+}
+
+.bar {
+    width: 26px; /* Augmenter la largeur des barres */
+    height: 4px; /* Augmenter la hauteur des barres */
+    background-color: var(--fifth);
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+.menu-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6.8px, 7.5px);
+    width: 28px;
+}
+
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6.8px, -7.5px);
+    width: 28px;
+}
+
+.side-menu {
+    width: 0;
+    height: 100vh;
+    background-color: var(--second);
+    overflow-x: hidden;
+    transition: 0.5s;
+    position: fixed;
+    width: 250px;
+    right: -250px;
+    z-index: 1;
+    padding-top: 60px;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px 0 0 0;
+}
+
+.side-menu a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--fifth);
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    /* background: var(--color-theme); */
+    background: var(--first);
+}
+
+#home {
+    border-radius: 5px 0 0 0;
+}
+
+#contactMe {
+    border-radius: 0 0 0 5px;
+}
+
+#content1 {
+    flex-grow: 1;
+}
+
+#content2 {
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+#content3 {
+    flex-grow: 1;
+    padding: 32px;
+}
+
+/*! GRID SYSTEM */
+
+#container {
+    margin-top: 30px;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    flex: 1 1 auto;
+    margin: 30px;
+    transition: 0.5s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.big {
+    flex-basis: 55%;
+    background-color: rgba(79, 119, 45, 0.8);
+    border-radius: 5px;
+}
+
+.small {
+    flex-basis: 25%;
+    background-color: rgba(144, 169, 85, 0.5);
+    border-radius: 15px;
+}
+
+#presentation,
+#hobbies,
+#parcours {
+    color: var(--fifth);
+    padding: 10px;
+}
+
+#profil {
+    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background-image: url(/images/profile.jpg);
+    background-size: cover;
+}
+
+#pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#taekwondo {
+    margin: 20px 0 0 20px;
+    width: 170px;
+    height: 170px;
+    background-image: url(/images/taekwondo.png);
+    background-size: cover;
+    rotate: -15deg;
+}
+
+#legendaires {
+    margin: 25px 25px 0 0;
+    width: 200px;
+    height: 200px;
+    background-image: url(/images/les_legendaires.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    rotate: 15deg;
+}
+
+#twitch {
+    margin: 0 0 0 20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-image: url(/images/twitch.png);
+    background-size: cover;
+    rotate: 15deg;
+}
+
+#videoGame {
+    margin: 15px;
+    width: 170px;
+    height: 170px;
+    background-image: url(/images/manette.png);
+    background-size: cover;
+    rotate: -15deg;
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--first);
+    margin: 30px auto;
+}
+
+#vsc {
+    margin: 20px 0 0 20px;
+    width: 170px;
+    height: 170px;
+    background-image: url(/images/code/VSC.png);
+    background-size: cover;
+    rotate: -15deg;
+}
+
+#js {
+    margin: 25px 25px 0 0;
+    width: 200px;
+    height: 200px;
+    background-image: url(/images/code/JavaScript.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    rotate: 15deg;
+}
+
+#github {
+    margin: 0 0 0 20px;
+    width: 170px;
+    height: 170px;
+    background-image: url(/images/code/GitHub.png);
+    background-size: cover;
+    rotate: 15deg;
+}
+
+#sololearn {
+    margin: 15px;
+    width: 170px;
+    height: 170px;
+    background-image: url(/images/code/Sololearn.png);
+    background-size: cover;
+    border-radius: 10px;
+    rotate: -15deg;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.overlayLeft {
+    rotate: 15deg;
+}
+
+.overlayRight {
+    rotate: -15deg;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay p {
+    color: var(--fifth);
+    font-size: 20px;
+    text-align: center;
+}
+
+/*! RESPONSIVE */
+
+@media (max-width: 768px) {
+    .grid-item {
+        flex-basis: 100%;
+    }
+}
