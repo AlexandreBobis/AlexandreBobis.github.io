@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Honk:MORF@12&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
-
 :root {
-    --color-theme: linear-gradient(rgb(255, 255, 142) 0%, rgb(255, 135, 92) 50%, rgb(255, 62, 175) 100%);
-    --background-theme: rgb(1, 1, 51);
+    --first: #132A13;
+    --second: #31572C;
+    --third: #4F772D;
+    --fourth: #90A955;
+    --fifth: #ECF39E;
+    --background-color: #16252C;
 }
 
 html {
-    background-color: var(--background-theme);
+    background-color: var(--fifth);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -24,11 +26,11 @@ header {
 .menu-container {
     display: flex;
     align-items: center;
+    background-color: var(--first);
 }
 
 #profileImg {
     margin-left: 10px;
-    /* margin-top: 10px; */
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -37,9 +39,22 @@ header {
 }
 
 header h1 {
+    animation: scaleEffect 5s infinite;
     font-size: 50px;
     text-align: center;
-    font-family: 'Honk', sans-serif;
+    color: var(--fifth);
+}
+
+@keyframes scaleEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /*! HAMBURGER */
@@ -47,23 +62,23 @@ header h1 {
 .menu-btn {
     cursor: pointer;
     padding: 10px;
-    color: #fff;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 2;
+    background-color: var(--first);
+    border-radius: 0 0 0 5px;
 }
 
 .bar {
     width: 26px; /* Augmenter la largeur des barres */
     height: 4px; /* Augmenter la hauteur des barres */
-    background-color: #fff;
+    background-color: var(--fifth);
     margin: 6px 0;
     transition: 0.3s;
 }
 
 .menu-btn.active .bar:nth-child(1) {
-    background-color: #fff;
     transform: rotate(-45deg) translate(-6.8px, 7.5px);
     width: 28px;
 }
@@ -80,7 +95,7 @@ header h1 {
 .side-menu {
     width: 0;
     height: 100vh;
-    background-color: var(--background-theme);
+    background-color: var(--second);
     overflow-x: hidden;
     transition: 0.5s;
     position: fixed;
@@ -96,13 +111,13 @@ header h1 {
     padding: 15px;
     text-decoration: none;
     font-size: 20px;
-    font-family: 'Honk', sans-serif;
+    color: var(--fifth);
     display: block;
     transition: 0.3s;
 }
 
 .side-menu a:hover {
-    background: var(--color-theme);
+    background: var(--first);
 }
 
 #home {
@@ -126,35 +141,32 @@ header h1 {
     padding: 2%;
 }
 
+#bande {
+    background-color: var(--second);
+    height: 80px;
+    width: 100%;
+    margin-top: 60px;
+    box-shadow: 0px 7px 20px 5px var(--first);
+}
+
+#bande h2 {
+    padding-top: 12.5px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--fifth);
+    padding-top: 20px;
+}
+
 #place {
-    font-family: 'Honk', sans-serif;
     text-align: center;
     font-size: large;
 }
 
-.bande1 {
-    background: linear-gradient(rgb(255, 255, 142) 0%, rgb(255, 135, 92) 50%, rgb(255, 62, 175) 100%);
-    height: 80px;
-    width: 100%;
-    box-shadow: 0px 7px 20px 5px;
-}
-
-.bande1 h2 {
-    padding-top: 12.5px;
-    font-family: Anta, sans-serif;
-    text-align: center;
-    font-size: 40px;
-    color: var(--background-theme);
-}
-
 #content {
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Honk', sans-serif;
-    font-size: large;
 }
 
 .links {
@@ -162,13 +174,11 @@ header h1 {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    margin-top: 20px;
 }
 
 .links a {
-    padding-top: auto;
     text-decoration: none;
-    color: var(--color-theme);
+    color: var(--fifth);
     font-size: 35px;
     transition: 0.3s;
     font-family: Anta, sans-serif;
@@ -178,58 +188,7 @@ header h1 {
     scale: 1.1;
 }
 
-/*! NEONS */
-
-.neon1 {
-    flex: 1;
-    margin: -10px 290px;
-    border-radius: 5px;
-    width: 280px;
-    height: 10px;
-    background-color: rgb(255, 2, 213);
-    filter: drop-shadow(0px 0px 10px rgb(255, 2, 213));
-    transform: rotate(-60deg);
-    animation: neon 2s ease-in-out infinite alternate;
-}
-
-.neon2 {
-    flex: 1;
-    margin: 0 490px;
-    border-radius: 5px;
-    width: 280px;
-    height: 10px;
-    background-color: rgb(1, 254, 83); 
-    filter: drop-shadow(0px 0px 10px rgb(1, 254, 83));
-    transform: rotate(60deg);
-    animation: neon 2s ease-in-out infinite alternate;
-}
-
-.neon3 {
-    flex: 1;
-    margin: 160px 390px;
-    border-radius: 5px;
-    width: 280px;
-    height: 10px;
-    background-color: rgb(0, 126, 245);
-    filter: drop-shadow(0px 0px 10px rgb(0, 126, 245));
-    animation: neon 2s ease-in-out infinite alternate;
-}
-
-.neons {
-    display: flex;
-    transform: rotate(35deg);
-    z-index: 0;
-}
-
-@keyframes neon {
-    0% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
+/*! RESPONSIVE */
 
 @media screen and (max-width: 600px) {
     header h1 {

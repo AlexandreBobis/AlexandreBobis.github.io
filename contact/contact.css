@@ -1,5 +1,4 @@
 html {
-    /* background-image: url(/images/umbrella.png); */
     background-repeat: no-repeat;
     background-position-y: bottom;
     overflow: hidden;
@@ -19,7 +18,7 @@ html {
 #main-container h2 {
     padding: 8px;
     font-size: 40px;
-    font-family: 'Honk', sans-serif;
+    color: var(--first);
     display: block;
     transition: 0.3s;
 }
@@ -34,7 +33,7 @@ html {
 }
 
 .logo {
-    color: white;
+    color: var(--second);
     font-size: 40px;
     transition: all 0.3s;
 }
@@ -46,12 +45,11 @@ html {
 footer {
     display: flex;
     justify-content: center;
-    background: var(--color-theme);
-    color: white;
+    color: var(--fifth);
     height: 30px;
     width: 100%;
     position: absolute;
-    bottom: 100px;
+    bottom: 120px;
     left: 0;
     right: 0;
     font-size: 20px;

@@ -8,7 +8,6 @@
 }
 
 html {
-    /* background-color: var(--fifth); */
     background-color: var(--background-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -28,7 +27,7 @@ body {
 header {
     display: block;
     width: 100vw;
-    height: 14vh;
+    height: 13vh;
 }
 
 .menu-container {
@@ -47,20 +46,21 @@ header {
 }
 
 header h1 {
+    animation: scaleEffect 5s infinite;
+    font-size: 50px;
     text-align: center;
-    color: #fff;
-    animation: effect 5s infinite;
+    color: var(--fifth);
 }
 
-@keyframes effect {
+@keyframes scaleEffect {
     0% {
-        color: #fff;
+        transform: scale(1);
     }
     50% {
-        color: var(--fifth);
+        transform: scale(1.1);
     }
     100% {
-        color: #fff;
+        transform: scale(1);
     }
 }
 
@@ -124,7 +124,6 @@ header h1 {
 }
 
 .side-menu a:hover {
-    /* background: var(--color-theme); */
     background: var(--first);
 }
 
@@ -142,12 +141,11 @@ header h1 {
 
 #content2 {
     flex-grow: 1;
-    padding-top: 10px;
 }
 
 #content3 {
     flex-grow: 1;
-    padding: 32px;
+    padding: 2%;
 }
 
 /*! GRID SYSTEM */
