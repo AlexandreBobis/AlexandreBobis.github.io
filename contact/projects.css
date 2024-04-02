@@ -160,19 +160,16 @@ header h1 {
 }
 
 #color1 {
-    background: rgb(44,16,0);
     background: linear-gradient(90deg, rgb(148,15,37) 0%, rgb(44,16,0) 10%, rgb(44,16,0) 90%, rgb(22,8,0) 100%);
     box-shadow: 0 0 20px 5px var(--first);
 }
 
 #color2 {
-    background: rgb(0,0,0);
     background: linear-gradient(90deg, rgb(22,8,0) 0%, rgb(0,0,0) 20%, rgb(0,0,0) 80%, rgb(2,35,63) 100%);
     box-shadow: 0 0 20px 5px var(--first);
 }
 
 #color3 {
-    background: rgb(4,69,125);
     background: linear-gradient(90deg, rgb(2,35,63) 0%, rgb(4,69,125) 20%, rgb(252,14,74) 80%, rgb(148,15,37) 100%);
     box-shadow: 0 0 20px 5px var(--first);
 }
@@ -203,4 +200,34 @@ button {
     margin: 10px 130px;
     text-align: center;
     color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay p {
+    color: var(--fifth);
+    font-size: 20px;
+    text-align: center;
+}
+
+.overlay a {
+    color: var(--fourth);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
 }

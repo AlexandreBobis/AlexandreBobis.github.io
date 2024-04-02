@@ -102,3 +102,6 @@ function getRandomPosition() {
     return [randomX,randomY];
 }
 
+window.onload = function() {
+    window.location.href = './contact/home.html';
+}
