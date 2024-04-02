@@ -1,0 +1,206 @@
+:root {
+    --first: #132A13;
+    --second: #31572C;
+    --third: #4F772D;
+    --fourth: #90A955;
+    --fifth: #ECF39E;
+    /* --background-color: #16252C; */
+}
+
+html {
+    background-color: var(--fifth);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block;
+    width: 100vw;
+    height: 13vh;
+    background-color: var(--fifth);
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--first);
+}
+
+#profileImg {
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(/images/profile-picture.jpg);
+    background-size: cover;
+}
+
+header h1 {
+    animation: scaleEffect 5s infinite;
+    font-size: 50px;
+    text-align: center;
+    color: var(--fifth);
+}
+
+@keyframes scaleEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*! HAMBURGER */
+
+.menu-btn {
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: var(--first);
+    border-radius: 0 0 0 5px;
+}
+
+.bar {
+    width: 26px; /* Augmenter la largeur des barres */
+    height: 4px; /* Augmenter la hauteur des barres */
+    background-color: var(--fifth);
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+.menu-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6.8px, 7.5px);
+    width: 28px;
+}
+
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6.8px, -7.5px);
+    width: 28px;
+}
+
+.side-menu {
+    width: 0;
+    height: 100vh;
+    background-color: var(--second);
+    overflow-x: hidden;
+    transition: 0.5s;
+    position: fixed;
+    width: 250px;
+    right: -250px;
+    z-index: 2;
+    padding-top: 60px;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px 0 0 0;
+}
+
+.side-menu a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--fifth);
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background: var(--first);
+}
+
+#home {
+    border-radius: 5px 0 0 0;
+}
+
+#contactMe {
+    border-radius: 0 0 0 5px;
+}
+
+#content1 {
+    flex-grow: 1;
+}
+
+#content2 {
+    flex-grow: 1;
+}
+
+#content3 {
+    flex-grow: 1;
+    padding: 3%;
+}
+
+/*! CAROUSEL */
+
+.carousel-inner {
+    background-color: var(--fifth);
+}
+
+.carousel-item {
+    background-color: var(--fourth);
+    margin-top: 50px;
+}
+
+#prevSlide, 
+#nextSlide {
+    top: 200px;
+    bottom: 170px;
+}
+
+#color1 {
+    background: rgb(44,16,0);
+    background: linear-gradient(90deg, rgb(148,15,37) 0%, rgb(44,16,0) 10%, rgb(44,16,0) 90%, rgb(22,8,0) 100%);
+    box-shadow: 0 0 20px 5px var(--first);
+}
+
+#color2 {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgb(22,8,0) 0%, rgb(0,0,0) 20%, rgb(0,0,0) 80%, rgb(2,35,63) 100%);
+    box-shadow: 0 0 20px 5px var(--first);
+}
+
+#color3 {
+    background: rgb(4,69,125);
+    background: linear-gradient(90deg, rgb(2,35,63) 0%, rgb(4,69,125) 20%, rgb(252,14,74) 80%, rgb(148,15,37) 100%);
+    box-shadow: 0 0 20px 5px var(--first);
+}
+
+img,
+p,
+video {
+    height: calc(100vh - 40vh);
+}
+
+button {
+    /* color: var(--fifth); */
+    color: #fff;
+}
+
+#imgCarousel {
+    display: block;
+    margin: auto;
+    border-radius: 42px;
+}
+
+#videoCarousel {
+    display: block;
+    margin: auto;
+}
+
+#textCarousel {
+    margin: 10px 130px;
+    text-align: center;
+    color: #fff;
+}
