@@ -80,6 +80,35 @@ function renderStars(count) {
     return `${safeCount} ⭐`;
 }
 
+// Extract owner/repo from a GitHub URL
+function extractRepoInfoFromUrl(url) {
+    try {
+        const parsed = new URL(url);
+        const parts = parsed.pathname.split('/').filter(Boolean);
+        if (parts.length >= 2) {
+            return { owner: parts[0], repo: parts[1] };
+        }
+    } catch (e) {
+        return null;
+    }
+    return null;
+}
+
+// Fetch star count from GitHub API with graceful fallback
+async function fetchRepoStars(projectUrl, fallback = 0) {
+    const info = extractRepoInfoFromUrl(projectUrl);
+    if (!info) return fallback;
+
+    try {
+        const res = await fetch(`https://api.github.com/repos/${info.owner}/${info.repo}`);
+        if (!res.ok) return fallback;
+        const json = await res.json();
+        return Number.isFinite(json.stargazers_count) ? json.stargazers_count : fallback;
+    } catch (err) {
+        return fallback;
+    }
+}
+
 // Charger et afficher les projets depuis portfolio.json
 async function loadProjects() {
     try {
@@ -87,8 +116,17 @@ async function loadProjects() {
         const projectsContainer = document.querySelector('.projects-container');
         
         if (projectsContainer && data.projectsList) {
-            projectsContainer.innerHTML = data.projectsList.map(project => {
-                const starsDisplay = renderStars(project.stars || 0);
+            // Récupérer les étoiles GitHub pour chaque projet en parallèle
+            const projectsWithStars = await Promise.all(
+                data.projectsList.map(async project => {
+                    // Essayer de récupérer les étoiles depuis GitHub, sinon utiliser la valeur du JSON
+                    const stars = await fetchRepoStars(project.url, project.stars || 0);
+                    return { ...project, stars };
+                })
+            );
+
+            projectsContainer.innerHTML = projectsWithStars.map(project => {
+                const starsDisplay = renderStars(project.stars);
                 const languagesHTML = project.languages && project.languages.length > 0 
                     ? `<div class="tech-used">
                         ${project.languages.map(lang => `<span>${lang}</span>`).join('')}
@@ -106,7 +144,7 @@ async function loadProjects() {
                         ${languagesHTML}
                         <div class="project-footer">
                             <a href="${project.url}" target="_blank" class="project-link">Voir le projet</a>
-                            <span class="project-stars" title="${project.stars || 0} étoile(s)">${starsDisplay}</span>
+                            <span class="project-stars" title="${project.stars} étoile(s)">${starsDisplay}</span>
                         </div>
                     </div>
                 </article>

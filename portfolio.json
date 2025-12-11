@@ -13,7 +13,7 @@
             "subtitle": "Easy-Keys est une extension de navigateur qui affiche un clavier virtuel avec tous les caractères accentués français. En un clic, vous pouvez copier n'importe quel caractère dans votre presse-papiers pour le coller où vous le souhaitez.",
             "image": "./images/easykeys.png",
             "url": "https://github.com/AlexandreBobis/Easy-Keys",
-            "stars": 0,
+            "stars": 1,
             "languages": ["JavaScript", "HTML", "CSS"]
         },
         {
