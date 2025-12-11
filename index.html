@@ -1,51 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/earth.png" type="image/png">
-    <link rel="stylesheet" href="index.css">
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-    <!-- THREE.JS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre Bobis - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <!-- <div class="contact">
-        <button id="contact">Me contacter</button>
-    </div> -->
-    <div class="begin">
-        <button id="begin">Ready to Start ?</button>
-    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">AB</a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#education" class="nav-link">Formation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle dark mode">
+                <span class="toggle-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
 
-    <section class="intro">
-        A long time ago, in a galaxy far, far away....
-    </section>
-    <section class="logo">
+    <header id="home">
         <h1>Alexandre Bobis</h1>
-    </section>
-    <div id="board">  
-        <div id="content">
-            <p id="title">Episode I</p>
-            <p id="subtitle">LE NOUVEL ESPOIR</p>
-            <br>
-            <p>Alexandre est actuellement en recherche d'une alternance. Développeur junior en plein apprentissage, il souhaite agrandir son arsenal et VOUS êtes capables de l'aider</p>
-            <p>Pourrez-vous l'aider à parvenir à ses fins ou le laisserez-vous sombrer du côté obscur ?</p>
-            <p>Un long voyage à travers l'espace l'attend...</p>
-        </div>  
-    </div>
+        <p class="subtitle">Développeur Full Stack / DevSecOps</p>
+        <p class="tagline">Passionné par la création d'applications web et mobile innovantes ainsi que la sécurité de celles-ci</p>
+        <div class="header-actions">
+            <a class="cv-button" href="./images/cv.pdf" download>Télécharger mon CV</a>
+        </div>
+    </header>
 
-    <div class="container">
-        <h1>coming soon...</h1>
-    </div>
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">À propos de moi</h2>
+                <div class="about-content">
+                    <img src="./images/profile.jpg" alt="Alexandre Bobis" class="profile-image">
+                    <div class="about-text">
+                        <p>Bonjour ! Je suis Alexandre, développeur Full Stack et passionné par la cybersécurité avec plusieurs années d'expérience dans le développement d'applications web et mobile sécurisées. J'aime résoudre des problèmes complexes et créer des solutions élégantes tout en garantissant la sécurité des données.</p>
+                        <p>Mon approche du développement combine créativité technique, attention aux détails et conscience de la sécurité, toujours avec l'objectif de fournir la meilleure expérience utilisateur tout en protégeant les informations sensibles. J'applique les bonnes pratiques de sécurité comme le chiffrement des données, l'authentification sécurisée et la prévention des vulnérabilités courantes.</p>
+                        <p>Quand je ne code pas, j'aime contribuer à des projets open source, m'entraîner sur des sites internet (comme Root-Me) pour améliorer mes compétences en cybersécurité et apprendre de nouvelles technologies dans ce domaine en constante évolution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!--! FONCTIONNEL -->
-    <!-- <div class="skip">
-        <button id="skip">Skip</button>
-    </div> -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Compétences</h2>
+                <div class="skills-container" id="skillsContainer"></div>
+            </div>
+        </section>
 
-    <script src="index.js"></script>
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Mes Projets</h2>
+                <div class="projects-container"></div>
+            </div>
+        </section>
+
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Expérience Professionnelle</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Développeur en alternance</h3>
+                            <p class="company">DevPoint</p>
+                            <p class="period">2024 - 2025</p>
+                            <ul>
+                                <li>Développement de plugins afin de manipuler des fichiers PDF et DOCX</li>
+                                <li>Création d'un chatbot de support utilisateur</li>
+                            </ul>
+                            <div class="tech-used">
+                                <span>C#</span>
+                                <span>Dataverse</span>
+                                <span>Copilot Studio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Développeur Web</h3>
+                            <p class="company">WebAgency Solutions</p>
+                            <p class="period">2020 - 2022</p>
+                            <ul>
+                                <li>Création de sites web responsives pour divers clients</li>
+                                <li>Développement d'extensions navigateur</li>
+                                <li>Optimisation des performances et SEO</li>
+                            </ul>
+                            <div class="tech-used">
+                                <span>JavaScript</span>
+                                <span>Vue.js</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Stagiaire Développeur</h3>
+                            <p class="company">StartupXYZ</p>
+                            <p class="period">2019 - 2020</p>
+                            <ul>
+                                <li>Développement d'applications mobile avec .NET MAUI</li>
+                                <li>Participation à la conception UI/UX</li>
+                                <li>Tests et débogage</li>
+                            </ul>
+                            <div class="tech-used">
+                                <span>C#</span>
+                                <span>.NET MAUI</span>
+                                <span>Xamarin</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Formations & Certifications</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-icon">🎓</div>
+                        <h3>Mastère - Expert de la Sécurité des Données, des Réseaux et des Systèmes</h3>
+                        <p class="school">École 2600 - Montigny-Le-Bretonneux</p>
+                        <p class="period">2025 - 2028</p>
+                        <p class="description">École de cybersécurité axée sur la pratique et les projets concrets. Apprentissage en réseaux, C, Assembleur et Python, problem solving</p>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">📜</div>
+                        <h3>Bachelor - Concepteur Développeur d'Applications</h3>
+                        <p class="school">Ada Tech School - Paris</p>
+                        <p class="period">2023 - 2025</p>
+                        <p class="description">Formation développeur web full-stack en alternance, projets par groupe de 3 à 4 (messagerie en ligne, extension de navigateur, application de gestion de produits)</p>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">⭐</div>
+                        <h3>Mastère - Architecte Logiciel</h3>
+                        <p class="school">Algosup - Vierzon</p>
+                        <p class="period">2021 - 2023</p>
+                        <p class="description">Formation de développeur sur plusieurs langages (F#, C#, HTML/CSS/JS, Python), projets par groupe de 5 (reconnaissance de langue par intelligence artificielle, détecteur de signalétique non fonctionnelle, site web pour une joaillerie), apprentissage du travail en équipe</p>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">🏆</div>
+                        <h3>Baccalauréat Général</h3>
+                        <p class="school">Lycée Jules Verne - Limours</p>
+                        <p class="period">2018 - 2021</p>
+                        <p class="description">Options NSI - SVT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Contactez-moi</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Restons en contact</h3>
+                        <p>N'hésitez pas à me contacter pour discuter de vos projets ou simplement pour échanger !</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="icon">📧</span>
+                                <a href="mailto:alexandre.bobis@ecole2600.com">alexandre.bobis@ecole2600.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">📱</span>
+                                <span>+33 6 16 27 57 49</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">📍</span>
+                                <span>Paris, France</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/AlexandreBobis" target="_blank" class="social-link">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/alexandre-bobis" target="_blank" class="social-link">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.root-me.org/AlexShadow?lang=fr#15dbf28d6602f1d93007454b1c2eede0" target="_blank" class="social-link">
+                                <span>Root-Me</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alexandre Bobis. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>

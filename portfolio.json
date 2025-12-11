@@ -1,0 +1,53 @@
+{
+    "projectsList": [
+        {
+            "title": "Perim'App",
+            "subtitle": "Perim'App est une application mobile développée en .NET MAUI, conçue pour aider les utilisateurs à suivre la date de péremption de leurs produits alimentaires.",
+            "image": "./images/perimapp.png",
+            "url": "https://github.com/AJA-Corp/perim_app/tree/develop",
+            "stars": 3,
+            "languages": ["C#", ".NET MAUI", "XAML"]
+        },
+        {
+            "title": "Easy Keys",
+            "subtitle": "Easy-Keys est une extension de navigateur qui affiche un clavier virtuel avec tous les caractères accentués français. En un clic, vous pouvez copier n'importe quel caractère dans votre presse-papiers pour le coller où vous le souhaitez.",
+            "image": "./images/easykeys.png",
+            "url": "https://github.com/AlexandreBobis/Easy-Keys",
+            "stars": 0,
+            "languages": ["JavaScript", "HTML", "CSS"]
+        },
+        {
+            "title": "Card Games",
+            "subtitle": "Collection de jeux de cartes classiques développés en Python avec une interface graphique simple.",
+            "image": "./images/joker.png",
+            "url": "https://github.com/AlexShadow3/Card_Games",
+            "stars": 0,
+            "languages": ["JavaScript", "HTML", "CSS"]
+        },
+        {
+            "title": "You Are The Last Of Them",
+            "subtitle": "YATLOT est un jeu à choix multiples créé avec Inky, le langage de programmation officiel d'Inkle. Amusez-vous bien !",
+            "image": "./images/yatlot.png",
+            "url": "https://github.com/AlexandreBobis/YATLOT",
+            "stars": 0,
+            "languages": ["Ink"]
+        },
+        {
+            "title": "Learning commands",
+            "subtitle": "Envie d'apprendre les commandes basiques de ton terminal ou de développer de nouveaux skills avec de nouvelles commandes ?",
+            "image": "./images/terminal.png",
+            "url": "https://github.com/AlexandreBobis/learning-commands",
+            "stars": 5,
+            "languages": ["Linux", "Shell", "Markdown"]
+        }        
+    ],
+    "skills": [
+        { "name": "JavaScript/Node", "level": 90 },
+        { "name": "C#/.NET MAUI", "level": 70 },
+        { "name": "Python", "level": 30 },
+        { "name": "HTML/CSS", "level": 95 },
+        { "name": "Git", "level": 80 },
+        { "name": "Docker", "level": 65 },
+        { "name": "Github Actions", "level": 80}
+    ]
+}
