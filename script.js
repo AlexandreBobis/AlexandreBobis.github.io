@@ -180,29 +180,44 @@ async function loadSkills() {
     }
 }
 
-// Handle contact form submission (example - you'll need to connect to a backend)
+// Handle contact form submission via Formspree
 function initContactForm() {
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
             
-            // Here you would normally send the data to a backend
-            console.log('Form submitted:', formData);
-            
-            // Show success message (you can customize this)
-            alert('Merci pour votre message ! Je vous répondrai bientôt.');
-            
-            // Reset form
-            contactForm.reset();
+            try {
+                // Disable button during submission
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Envoi en cours...';
+                
+                // Send form data to Formspree
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Merci pour votre message ! Je vous répondrai bientôt.');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Erreur lors de l\'envoi');
+                }
+            } catch (error) {
+                alert('Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
         });
     }
 }
