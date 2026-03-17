@@ -6,7 +6,7 @@
             "image": "./images/perimapp.png",
             "url": "https://github.com/AJA-Corp/perim_app/tree/develop",
             "stars": 3,
-            "languages": ["C#", ".NET MAUI", "XAML"]
+            "languages": ["C#", ".NET MAUI", "XAML", "PostgreSQL"]
         },
         {
             "title": "Easy Keys",
@@ -14,11 +14,11 @@
             "image": "./images/easykeys.png",
             "url": "https://github.com/AlexandreBobis/Easy-Keys",
             "stars": 1,
-            "languages": ["JavaScript", "HTML", "CSS"]
+            "languages": ["JavaScript"]
         },
         {
             "title": "Card Games",
-            "subtitle": "Collection de jeux de cartes classiques développés en Python avec une interface graphique simple.",
+            "subtitle": "Collection de jeux de cartes classiques développés en HTML/CSS/JS avec une interface graphique simple.",
             "image": "./images/joker.png",
             "url": "https://github.com/AlexShadow3/Card_Games",
             "stars": 0,
@@ -38,7 +38,7 @@
             "image": "./images/terminal.png",
             "url": "https://github.com/AlexandreBobis/learning-commands",
             "stars": 5,
-            "languages": ["Linux", "Shell", "Markdown"]
+            "languages": ["Linux", "Shell", "Git"]
         }        
     ],
     "skills": [
