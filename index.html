@@ -27,8 +27,18 @@
                 <li><a href="#education" class="nav-link">Formation</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle dark mode">
-                <span class="toggle-icon">🌙</span>
+            <button id="darkModeToggle" class="dark-mode-toggle" role="switch" aria-checked="false" aria-label="Basculer le mode sombre" title="Basculer le mode sombre">
+                <span class="toggle-track">
+                    <span class="toggle-icon-left">
+                        <img src="./images/icons/light_mode_black.png" alt="Mode clair" class="toggle-img">
+                    </span>
+                    <span class="toggle-icon-right">
+                        <img src="./images/icons/dark_mode_black.png" alt="Mode sombre" class="toggle-img">
+                    </span>
+                    <span class="toggle-thumb">
+                        <img src="./images/icons/light_mode_white.png" alt="Mode clair" class="toggle-thumb-img" id="toggleThumbIcon">
+                    </span>
+                </span>
             </button>
         </div>
     </nav>

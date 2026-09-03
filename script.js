@@ -5,23 +5,46 @@ function initDarkMode() {
     const savedMode = localStorage.getItem('darkMode');
     
     // Set initial dark mode state
-    if (savedMode === 'true' || (savedMode === null && prefersDark)) {
+    const isDark = savedMode === 'true' || (savedMode === null && prefersDark);
+    if (isDark) {
         document.body.classList.add('dark-mode');
-        updateToggleIcon(true);
     }
+    updateToggleState(isDark);
     
     // Toggle dark mode on button click
-    darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode);
-        updateToggleIcon(isDarkMode);
-    });
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateToggleState(isDarkMode);
+        });
+    }
+}
+
+function updateToggleState(isDarkMode) {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const thumbIcon = document.getElementById('toggleThumbIcon');
+    const leftIcon = document.querySelector('.toggle-icon-left .toggle-img');
+    const rightIcon = document.querySelector('.toggle-icon-right .toggle-img');
+    
+    if (darkModeToggle) {
+        darkModeToggle.setAttribute('aria-checked', isDarkMode ? 'true' : 'false');
+    }
+    if (thumbIcon) {
+        thumbIcon.src = isDarkMode ? './images/icons/dark_mode_white.png' : './images/icons/light_mode_white.png';
+        thumbIcon.alt = isDarkMode ? 'Mode sombre' : 'Mode clair';
+    }
+    if (leftIcon) {
+        leftIcon.src = isDarkMode ? './images/icons/light_mode_white.png' : './images/icons/light_mode_black.png';
+    }
+    if (rightIcon) {
+        rightIcon.src = isDarkMode ? './images/icons/dark_mode_white.png' : './images/icons/dark_mode_black.png';
+    }
 }
 
 function updateToggleIcon(isDarkMode) {
-    const toggleIcon = document.querySelector('.toggle-icon');
-    toggleIcon.textContent = isDarkMode ? '☀️' : '🌙';
+    updateToggleState(isDarkMode);
 }
 
 // Navigation mobile toggle
