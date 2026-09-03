@@ -6,23 +6,34 @@
             "image": "./images/perimapp.png",
             "url": "https://github.com/AJA-Corp/perim_app/tree/develop",
             "stars": 3,
-            "languages": ["C#", ".NET MAUI", "XAML", "PostgreSQL"]
+            "languages": [
+                "C#",
+                ".NET MAUI",
+                "XAML",
+                "PostgreSQL"
+            ]
         },
         {
             "title": "Easy Keys",
-            "subtitle": "Easy-Keys est une extension de navigateur qui affiche un clavier virtuel avec tous les caractères accentués français. En un clic, vous pouvez copier n'importe quel caractère dans votre presse-papiers pour le coller où vous le souhaitez.",
+            "subtitle": "Easy-Keys est une extension de navigateur qui affiche un popup avec tous les caractères accentués français. En un clic, vous pouvez copier n'importe quel caractère dans votre presse-papiers pour le coller où vous le souhaitez.",
             "image": "./images/easykeys.png",
             "url": "https://github.com/AlexandreBobis/Easy-Keys",
             "stars": 1,
-            "languages": ["JavaScript"]
+            "languages": [
+                "JavaScript"
+            ]
         },
         {
             "title": "Card Games",
             "subtitle": "Collection de jeux de cartes classiques développés en HTML/CSS/JS avec une interface graphique simple.",
             "image": "./images/joker.png",
-            "url": "https://github.com/AlexShadow3/Card_Games",
+            "url": "https://github.com/CodeX-Syndicate/Card_Games",
             "stars": 0,
-            "languages": ["JavaScript", "HTML", "CSS"]
+            "languages": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ]
         },
         {
             "title": "You Are The Last Of Them",
@@ -30,7 +41,9 @@
             "image": "./images/yatlot.png",
             "url": "https://github.com/AlexandreBobis/YATLOT",
             "stars": 0,
-            "languages": ["Ink"]
+            "languages": [
+                "Ink"
+            ]
         },
         {
             "title": "Learning commands",
@@ -38,16 +51,49 @@
             "image": "./images/terminal.png",
             "url": "https://github.com/AlexandreBobis/learning-commands",
             "stars": 5,
-            "languages": ["Linux", "Shell", "Git"]
-        }        
+            "languages": [
+                "Linux",
+                "Shell",
+                "Git"
+            ]
+        }
     ],
     "skills": [
-        { "name": "JavaScript/Node", "level": 90 },
-        { "name": "C#/.NET MAUI", "level": 70 },
-        { "name": "Python", "level": 30 },
-        { "name": "HTML/CSS", "level": 95 },
-        { "name": "Git", "level": 80 },
-        { "name": "Docker", "level": 65 },
-        { "name": "Github Actions", "level": 80}
+        {
+            "name": "JavaScript/Node",
+            "level": 90
+        },
+        {
+            "name": "React",
+            "level": 60
+        },
+        {
+            "name": "Next.js",
+            "level": 70
+        },
+        {
+            "name": "C#/.NET MAUI",
+            "level": 70
+        },
+        {
+            "name": "Python",
+            "level": 30
+        },
+        {
+            "name": "HTML/CSS",
+            "level": 95
+        },
+        {
+            "name": "Git",
+            "level": 80
+        },
+        {
+            "name": "Docker",
+            "level": 65
+        },
+        {
+            "name": "Github Actions",
+            "level": 80
+        }
     ]
 }
