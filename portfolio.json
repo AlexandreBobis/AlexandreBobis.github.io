@@ -36,6 +36,18 @@
             ]
         },
         {
+            "title": "Orlog",
+            "subtitle": "Orlog est un jeu de dés Viking créé avec HTML/CSS/JS avec une interface graphique simple.",
+            "image": "./images/orlog.png",
+            "url": "https://github.com/CodeX-Syndicate/Orlog",
+            "stars": 0,
+            "languages": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
             "title": "You Are The Last Of Them",
             "subtitle": "YATLOT est un jeu à choix multiples créé avec Inky, le langage de programmation officiel d'Inkle. Amusez-vous bien !",
             "image": "./images/yatlot.png",
