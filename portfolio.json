@@ -38,7 +38,7 @@
         {
             "title": "Orlog",
             "subtitle": "Orlog est un jeu de dés Viking créé avec HTML/CSS/JS avec une interface graphique simple.",
-            "image": "./images/orlog.png",
+            "image": "./images/orlog.jpg",
             "url": "https://github.com/CodeX-Syndicate/Orlog",
             "stars": 0,
             "languages": [
